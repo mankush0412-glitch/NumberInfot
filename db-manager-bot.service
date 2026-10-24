@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram DB Manager Bot
+After=network.target telegram-bot-api.service
+Requires=telegram-bot-api.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/users-api
+EnvironmentFile=/opt/users-api/.env
+ExecStart=/opt/users-api/venv/bin/python /opt/users-api/manager_bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

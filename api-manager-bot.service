@@ -1,0 +1,15 @@
+[Unit]
+Description=API Key Manager Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/users-api
+EnvironmentFile=/opt/users-api/.env
+ExecStart=/opt/users-api/venv/bin/python /opt/users-api/bot.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

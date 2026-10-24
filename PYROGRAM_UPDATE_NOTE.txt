@@ -1,0 +1,7 @@
+Pyrogram/MTProto update
+
+- Local Telegram Bot API (127.0.0.1:8081) is no longer used by manager.py.
+- Uses PyroFork, a maintained Pyrogram-compatible package (imports remain `pyrogram`).
+- Add TELEGRAM_API_ID and TELEGRAM_API_HASH to .env.
+- Existing database installer, API-key logic, FastAPI service and database paths are preserved.
+- manager.py and manager_bot.py are identical so either launcher filename works.

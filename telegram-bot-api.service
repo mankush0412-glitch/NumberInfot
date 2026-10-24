@@ -1,0 +1,20 @@
+[Unit]
+Description=Local Telegram Bot API Server
+After=network.target
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=/opt/users-api/local_bot_api.env
+ExecStart=/usr/local/bin/telegram-bot-api \
+  --api-id=${TELEGRAM_API_ID} \
+  --api-hash=${TELEGRAM_API_HASH} \
+  --local \
+  --http-port=8081 \
+  --dir=/var/lib/telegram-bot-api \
+  --temp-dir=/var/lib/telegram-bot-api/temp
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

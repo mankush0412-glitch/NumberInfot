@@ -1,0 +1,4 @@
+This package is based on the previously complete DB Manager package.
+It preserves document upload, split-part handling, staging, validation, activation,
+backup/rollback, API key generate/list/enable/disable/delete, and service files.
+fastapi_app.py and api_server.py contain the latest API server code.

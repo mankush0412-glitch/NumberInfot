@@ -1,0 +1,3 @@
+Complete source package. hitek2.db, api_keys.db and real .env secrets are intentionally not included.
+Latest API entrypoint: api_server.py
+Systemd service has been pointed to api_server:app.
